@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
+require 'emoruby'
+require 'pathname'
 
 if path_arg = ARGV.first
-  require 'emoruby'
-  require 'pathname'
   path = Pathname.new(path_arg).exist? ? Pathname.new(path_arg) : Pathname.pwd.join(path_arg)
   Emoruby.eval(File.read(path))
 else

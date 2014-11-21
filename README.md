@@ -1,29 +1,47 @@
-# Emoruby
+# emoruby
 
-TODO: Write a gem description
+A little language that compiles Emoji down to Ruby. It's just Ruby. Really.
 
-## Installation
+## The Language
 
-Add this line to your application's Gemfile:
+If I were a real programming language designer, I would have put a lot of thought into the syntax, semantics, and structure of emoruby. Instead I basically implemented a very inefficient find and replace from a fixed dictionary. (🐄🎩!)
 
-    gem 'emoruby'
+Anyway, here is an example hello world program:
 
-And then execute:
+``` emoruby
+📋 ❤️
+  🔜 👋
+    👀 💬😃 🌏💬
+  🔚
+🔚
 
-    $ bundle
+❤️▪️🐣▪️👋
+```
 
-Or install it yourself as:
+## gem usage
 
-    $ gem install emoruby
+### command line
 
-## Usage
+``` shell
+$ emoruby spec/fixtures/1-hello-world.emoruby 
+smiley earth_asia
+```
 
-TODO: Write usage instructions here
+### API
 
-## Contributing
+The API allows both evaluation of emoruby code as well as translation to Ruby.
 
-1. Fork it ( https://github.com/[my-github-username]/emoruby/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+``` ruby
+> source = "💬😃 🌏💬" 
+=> "💬😃 🌏💬"
+> Emoruby.eval(source)
+=> "smiley earth_asia"
+Emoruby.emoji_to_ruby(source)
+=> "\"smiley earth_asia\""
+```
+
+## Versioning
+
+The Emoruby team embraces the iconographic versioning standard ("icover" for short). 
+
+The initial release was 💩 (in honor of @tenderlove's 💩-lang). The next planned release is ✊.
