@@ -4,7 +4,7 @@ module Emoruby
       Emoruby.eval(File.read(filename))
     end
 
-    def self.register(file_extension = "emoruby")
+    def self.register(file_extension)
       require 'polyglot'
       Polyglot.register(file_extension, Emoruby::Require)
       return

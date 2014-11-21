@@ -15,8 +15,8 @@ module Emoruby
     __emoruby_top_level_binding_eval(emoji_to_ruby(source))
   end
 
-  def self.register
+  def self.register(file_extension = "emoruby")
     require 'emoruby/require'
-    Require.register
+    Require.register(file_extension)
   end
 end
