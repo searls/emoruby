@@ -1,7 +1,7 @@
-class HeavyBlackHeart
-  def waving_hand_sign
-    puts "Smiling face with open mouth Earth globe asia-australia"
+class Heart
+  def wave
+    puts "smiley earth_asia"
   end
 end
 
-HeavyBlackHeart.new.waving_hand_sign
+Heart.new.wave
