@@ -3,18 +3,20 @@ source 'https://rubygems.org'
 gem 'rspec', '~> 2.99'
 gem 'rspec-given'
 
+gem 'pry'
+
 #emoji
-# gem 'emoji'
-# gem 'gemoji'
-# gem 'emojify'
-# gem 'emoji_data'
-# gem 'emojidex'
-# gem 'utf8_emoji'
+gem 'emoji'
+gem 'gemoji'
+gem 'emojify'
+gem 'emoji_data'
+gem 'emojidex'
+gem 'utf8_emoji'
 
 #lexers
-# gem 'rubylexer'
+gem 'rubylexer'
 #
 # #parsers
-# gem 'citrus'
-# gem 'treetop'
-# gem 'parslet'
+gem 'citrus'
+gem 'treetop'
+gem 'parslet'
