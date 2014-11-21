@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+
+if path_arg = ARGV.first
+  require 'emoruby'
+  require 'pathname'
+  path = Pathname.new(path_arg).exist? ? Pathname.new(path_arg) : Pathname.pwd.join(path_arg)
+  Emoruby.eval(File.read(path))
+else
+  puts "Usage:"
+  puts "  emoruby \"path/to/some.emoruby\""
+end
