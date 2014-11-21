@@ -51,7 +51,7 @@ smiley earth_asia
 You can run emoruby from the command line by passing an emoruby file as the first argument:
 
 ``` shell
-$ emoruby spec/fixtures/1-hello-world.emoruby 
+$ emoruby spec/fixtures/1_hello_world.emoruby
 smiley earth_asia
 ```
 
@@ -60,7 +60,7 @@ smiley earth_asia
 The API allows both evaluation of emoruby code as well as translation to Ruby.
 
 ``` ruby
-> source = "💬😃 🌏💬" 
+> source = "💬😃 🌏💬"
 => "💬😃 🌏💬"
 > Emoruby.eval(source)
 => "smiley earth_asia"
@@ -70,6 +70,6 @@ Emoruby.emoji_to_ruby(source)
 
 ## Versioning
 
-The Emoruby team embraces and advocates the adoption of the the emerging iconographic versioning standard ("icover" for short). 
+The Emoruby team embraces and advocates the adoption of the the emerging iconographic versioning standard ("icover" for short).
 
 The initial release was 💩 (in honor of @tenderlove's 💩-lang). The next planned release is ✊.

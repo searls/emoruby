@@ -9,7 +9,7 @@ describe Emoruby do
   Given(:expected_ruby) { File.read(expected_ruby_path) }
 
   context "a hello world app" do
-    Given(:file_name) { "1-hello-world" }
+    Given(:file_name) { "1_hello_world" }
 
     describe 'translating source' do
       When(:result) { Emoruby.emoji_to_ruby(emo_source) }
