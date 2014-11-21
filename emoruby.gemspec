@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Justin Searls"]
   spec.email         = ["searls@gmail.com"]
   spec.summary       = %q{A little emoji language that compiles down to Ruby}
-  spec.description   = %q{A little emoji language that compiles down to Ruby. It's just ruby}
+  spec.description   = %q{A little emoji language that compiles down to Ruby. "It's just ruby."}
   spec.homepage      = "https://github.com/searls/emoruby"
   spec.license       = "MIT"
 
