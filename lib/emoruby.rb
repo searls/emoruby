@@ -1,34 +1,17 @@
 require "emoruby/version"
+require "emoruby/emoji_script"
 
-require 'emoji_data'
+# TODO there has to be a better way to eval on top of the world, right?
+def __emoruby_top_level_binding_eval(source)
+  binding.eval(source)
+end
 
 module Emoruby
-  TRANSLATIONS = {
-    "clipboard" => "class",
-    "soon" => "def",
-    "eyes" => "puts",
-    "speech_balloon" => "\"",
-    "end" => "end", #<- redundant!
-    "black_small_square" => ".",
-    "hatching_chick" => "new",
+  def self.emoji_to_ruby(source)
+    EmojiScript.new(source).to_ruby
+  end
 
-    # cheats until i can translate names
-    "heart" => "Heart"
-  }
-
-  GARBAGE = [
-    [239,184,143] # evil problematic whitespace where is it from where am i what even
-  ]
-
-  def self.translate(source)
-    source.chars.map do |char|
-      if emoji = EmojiData.find_by_str(char).first
-        TRANSLATIONS[emoji.short_name] || emoji.short_name
-      elsif GARBAGE.include?(char.bytes)
-        ""
-      else
-        char
-      end
-    end.join
+  def self.eval(source)
+    __emoruby_top_level_binding_eval(emoji_to_ruby(source))
   end
 end
