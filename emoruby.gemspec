@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Emoruby::VERSION
   spec.authors       = ["Justin Searls"]
   spec.email         = ["searls@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{A little emoji language that compiles down to Ruby}
+  spec.description   = %q{A little emoji language that compiles down to Ruby. It's just ruby}
+  spec.homepage      = "https://github.com/searls/emoruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
