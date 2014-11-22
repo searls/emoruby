@@ -9,7 +9,8 @@ module Emoruby
       "eyes" => "puts",
       "speech_balloon" => "\"",
       "black_small_square" => ".",
-      "hatching_chick" => "new"
+      "hatching_chick" => "new",
+      "boom" => "raise"
     }
 
     GARBAGE = [
