@@ -36,16 +36,16 @@ You can also define things like Procs:
 
 ```emoruby
 👉 🔨
- 👀 💬😃💬
+ 💬😃💬
 🔚▪️📞
 ```
 
 which is equivalent to this Ruby:
 
 ```ruby
--> {
-  puts "smiley"
-}.call
+-> do
+  "smiley"
+end.call
 ```
 
 You can define private methods:
