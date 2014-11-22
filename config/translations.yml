@@ -5,6 +5,8 @@
 🔚: end
 🚣: self
 ✋: yield
+⛔️: private
+👉: "->"
 
 # symbols
 💬: "\""
@@ -18,3 +20,5 @@
 🐣: new
 💥: raise
 ➕: +
+🚰: tap
+📞: call

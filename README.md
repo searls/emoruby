@@ -10,7 +10,7 @@ If I were a real language designer, I would have put a lot of thought into the s
 
 Anyway, here is an example hello world program:
 
-``` emoruby
+```emoruby
 📋 ❤️
   🔜 👋
     👀 💬😃 🌏💬
@@ -32,13 +32,59 @@ end
 Heart.new.wave
 ```
 
+You can also define things like Procs:
+
+```emoruby
+👉 {
+ 👀 💬😃💬
+}▪️📞
+```
+
+which is equivalent to this Ruby:
+
+```ruby
+-> {
+  puts "smiley"
+}
+```
+
+You can define private methods:
+
+```emoruby
+📋 ❤️
+  ⛔️ 🔜 👋
+    👀 💬😃 🌏💬
+  🔚
+🔚
+
+❤️▪️🐣▪️👋
+```
+
+which is equivalent to this Ruby:
+
+```ruby
+class Heart
+  private def wave
+    puts "smiley earth_asia"
+  end
+end
+
+Heart.new.wave
+```
+
+Which will result in a warning:
+
+```
+NoMethodError: private method `wave' called for #<Heart:0x007f81eb840138>
+```
+
 ## Using the gem
 
 ### registering the ".emoruby" file extension
 
 Emoruby uses polyglot to enable `require` to be used on `.emoruby` files just as you do with Ruby source `.rb` files. To register the file extension, simply:
 
-``` ruby
+```ruby
 > require 'emoruby'
 => true
 > Emoruby.register
@@ -52,7 +98,7 @@ smiley earth_asia
 
 You can run emoruby from the command line by passing an emoruby file as the first argument:
 
-``` shell
+```shell
 $ emoruby spec/fixtures/1_hello_world.emoruby
 smiley earth_asia
 ```
@@ -61,7 +107,7 @@ smiley earth_asia
 
 The API allows both evaluation of emoruby code as well as translation to Ruby.
 
-``` ruby
+```ruby
 > source = "💬😃 🌏💬"
 => "💬😃 🌏💬"
 > Emoruby.eval(source)
