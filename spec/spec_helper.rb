@@ -1,5 +1,14 @@
 require 'rspec/given'
+
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
+require 'pry'
+
 require 'support/file_helpers'
+RSpec.configure do |c|
+  c.include FileHelpers
+end
 
 RSpec::Matchers.define :match_all_the_characters_of do |expected|
   match do |actual|
@@ -14,10 +23,3 @@ RSpec::Matchers.define :match_all_the_characters_of do |expected|
     end.join("\n")
   end
 end
-
-RSpec.configure do |c|
-  c.include FileHelpers
-end
-
-# other junk
-require 'pry'
