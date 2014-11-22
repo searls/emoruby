@@ -35,9 +35,9 @@ Heart.new.wave
 You can also define things like Procs:
 
 ```emoruby
-👉 {
+👉 🔨
  👀 💬😃💬
-}▪️📞
+🔚▪️📞
 ```
 
 which is equivalent to this Ruby:
