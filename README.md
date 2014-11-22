@@ -1,5 +1,7 @@
 # emoruby
 
+[![Build Status](https://travis-ci.org/searls/emoruby.svg?branch=master)](https://travis-ci.org/searls/emoruby)
+
 A little language that compiles Emoji down to Ruby. It's just Ruby. Really.
 
 ## The Language
