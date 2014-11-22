@@ -3,13 +3,9 @@ require 'spec_helper'
 require 'emoruby'
 
 describe Emoruby do
-  Given(:emo_path) { Pathname.pwd.join("spec","fixtures","#{file_name}.emoruby") }
-  Given(:emo_source) { File.read(emo_path) }
-  Given(:expected_ruby_path) { Pathname.pwd.join("spec","fixtures","#{file_name}.rb") }
-  Given(:expected_ruby) { File.read(expected_ruby_path) }
-
   context "a hello world app" do
-    Given(:file_name) { "1_hello_world" }
+    Given(:emo_source) { load_fixture("1_hello_world") }
+    Given(:expected_ruby) { load_fixture("1_hello_world","rb") }
 
     describe 'translating source' do
       When(:result) { Emoruby.emoji_to_ruby(emo_source) }

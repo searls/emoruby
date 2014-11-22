@@ -1,4 +1,5 @@
 require 'rspec/given'
+require 'support/file_helpers'
 
 RSpec::Matchers.define :match_all_the_characters_of do |expected|
   match do |actual|
@@ -12,6 +13,10 @@ RSpec::Matchers.define :match_all_the_characters_of do |expected|
       "expected that character #{i} would be #{c} but was #{actual[i]} (near '#{actual[i-5..i+5]}')"
     end.join("\n")
   end
+end
+
+RSpec.configure do |c|
+  c.include FileHelpers
 end
 
 # other junk

@@ -1,13 +1,19 @@
 # keywords
 📋: class
+📦: module
 🔜: def
 🔚: end
+🚣: self
 
 # symbols
 💬: "\""
-▪️: .
+▪️: "."
+↪️: "("
+↩️: ")"
+➰: ","
 
 # conveniences
 👀: puts
 🐣: new
 💥: raise
+➕: +
