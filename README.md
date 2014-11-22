@@ -45,7 +45,7 @@ which is equivalent to this Ruby:
 ```ruby
 -> {
   puts "smiley"
-}
+}.call
 ```
 
 You can define private methods:
