@@ -1,0 +1,3 @@
+-> do
+  "smiley"
+end.call

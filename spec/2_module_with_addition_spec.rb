@@ -1,3 +1,7 @@
+require 'spec_helper'
+
+require 'emoruby'
+
 describe Emoruby do
   Given(:source) { load_fixture("2_module_with_addition") }
   When { Emoruby.eval(source) }

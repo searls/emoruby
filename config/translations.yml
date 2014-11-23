@@ -5,6 +5,13 @@
 🔚: end
 🚣: self
 ✋: yield
+🔓: public
+🔒: protected
+⛔️: private
+👉: "->"
+🔨: do
+➿: loop
+🎡: while
 
 # symbols
 💬: "\""
@@ -12,9 +19,13 @@
 ↪️: "("
 ↩️: ")"
 ➰: ","
+💭: '#'
 
 # conveniences
 👀: puts
 🐣: new
 💥: raise
 ➕: +
+🚰: tap
+📞: call
+⚠️: warn
