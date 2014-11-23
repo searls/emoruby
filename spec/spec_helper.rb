@@ -19,8 +19,5 @@ RSpec::Matchers.define :match_all_the_characters_of do |expected|
 
   failure_message_for_should do |actual|
     [actual, expected].join("\n\ndid not equal\n\n")
-    # actual.chars.each_with_index.reject { |c, i| expected[i] == c }.map do |c,i|
-    #   "expected that character #{i} would be #{c} but was #{actual[i]} (near '#{actual[i-5..i+5]}')"
-    # end.join("\n")
   end
 end
