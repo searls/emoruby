@@ -138,4 +138,4 @@ Emoruby.emoji_to_ruby(source)
 
 The Emoruby team embraces and advocates the adoption of the the emerging iconographic versioning standard ("icover" for short).
 
-The initial release was 💩 (in honor of @tenderlove's 💩-lang). The next planned release is ✊.
+The initial release was 💩 (in honor of @tenderlove's 💩-lang). After that, ✊ was released. Next up is, of course, 🐷.
