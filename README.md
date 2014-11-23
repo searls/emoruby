@@ -72,7 +72,7 @@ end
 Heart.new.wave
 ```
 
-Which will result in a warning:
+Which will result in an exception:
 
 ```
 NoMethodError: private method `wave' called for #<Heart:0x007f81eb840138>
