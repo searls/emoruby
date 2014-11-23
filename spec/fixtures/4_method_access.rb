@@ -5,7 +5,12 @@ class Heart
 end
 
 class Snowman
+  public
   def lollipop
+  end
+
+  protected
+  def floppy_disk
   end
 
   private

@@ -5,6 +5,8 @@
 🔚: end
 🚣: self
 ✋: yield
+🔓: public
+🔒: protected
 ⛔️: private
 👉: "->"
 🔨: do
