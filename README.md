@@ -32,9 +32,10 @@ end
 Heart.new.wave
 ```
 
-You can also define things like Procs:
+You can also define things like Procs and comments:
 
 ```emoruby
+#️⃣ Comment! 👋
 👉 🔨
  💬😃💬
 🔚▪️📞
@@ -43,12 +44,13 @@ You can also define things like Procs:
 which is equivalent to this Ruby:
 
 ```ruby
+# Comment! 👋
 -> do
   "smiley"
 end.call
 ```
 
-You can define private methods:
+You can define private methods and write comments:
 
 ```emoruby
 📋 ❤️
