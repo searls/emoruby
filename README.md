@@ -50,10 +50,18 @@ which is equivalent to this Ruby:
 end.call
 ```
 
-You can define private methods and write comments:
+You can define private and protected methods:
 
 ```emoruby
 📋 ❤️
+  🔓 🔜 👖
+    👀 💬👛💬
+  🔚
+
+  🔒️ 🔜 👕
+    👀 💬💛💬
+  🔚
+
   ⛔️ 🔜 👋
     👀 💬😃 🌏💬
   🔚
@@ -66,6 +74,14 @@ which is equivalent to this Ruby:
 
 ```ruby
 class Heart
+  public def jeans
+    puts "purse"
+  end
+
+  protected def shirt
+    puts "yellow_heart"
+  end
+
   private def wave
     puts "smiley earth_asia"
   end
