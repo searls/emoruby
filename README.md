@@ -35,7 +35,7 @@ Heart.new.wave
 You can also define things like Procs and comments:
 
 ```emoruby
-#️⃣ Comment! 👋
+💭 Comment! 👋
 👉 🔨
  💬😃💬
 🔚▪️📞
