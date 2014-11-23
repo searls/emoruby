@@ -31,7 +31,7 @@ describe Emoruby do
     describe 'evaluating source' do
       Given(:source_with_stripped_puts) { emo_source.gsub(EmojiData.find_by_short_name("eyes").first.to_s, "") }
       When(:result) { Emoruby.eval(source_with_stripped_puts) }
-      Then { expect(Heart.private_method_defined?(:wave)).to be_truthy }
+      Then { expect(Heart).to be_private_method_defined(:wave) }
     end
   end
 end
