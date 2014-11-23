@@ -57,9 +57,9 @@ module Emoruby
 
         translate_chars(chars) do |char|
           next if comments
-          comments ||= (emoji_name_for(char) == '#')
-          next unless emoji_name = emoji_name_for(char)
-          emoji_name
+          emo_char = emoji_name_for(char)
+          comments ||= (emo_char == '#')
+          emo_char
         end
       end
     end
