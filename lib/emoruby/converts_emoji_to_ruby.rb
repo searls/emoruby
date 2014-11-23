@@ -12,13 +12,15 @@ module Emoruby
       [239,184,143] # evil problematic whitespace where is it from where am i what even
     ]
 
-    def call(src)
-      @source = src
-      translate_lines(source.lines).join("")
+    def initialize(source)
+      @source = source
+    end
+
+    def call
+      translate_lines(@source.lines).join("")
     end
 
   private
-    attr_reader :source
 
     def translate_lines(lines)
       lines.map do |line|
@@ -40,7 +42,7 @@ module Emoruby
 
     def constant_map
       @constant_map ||= Hash[
-        source.split(/\s+/).each_cons(2).map do |operator, emo_constant|
+        @source.split(/\s+/).each_cons(2).map do |operator, emo_constant|
           next unless ['class', 'module'].include?(emoji_name_for(operator))
           [
             emo_constant,

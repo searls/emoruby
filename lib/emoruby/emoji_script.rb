@@ -9,7 +9,7 @@ module Emoruby
     end
 
     def to_ruby
-      @ruby ||= ConvertsEmojiToRuby.new.call(@source)
+      @ruby ||= ConvertsEmojiToRuby.new(@source).call
     end
 
     def eval
