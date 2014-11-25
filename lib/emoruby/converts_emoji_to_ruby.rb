@@ -24,7 +24,7 @@ module Emoruby
 
     def translate_lines(lines)
       lines.map do |line|
-        chars = clean_chars(scan_and_translate_constants(line).chars)
+        chars = clean_chars(scan_and_translate_doublebyte(scan_and_translate_constants(line)).chars)
         comments = false
 
         translate_chars(chars) do |char|
@@ -37,7 +37,15 @@ module Emoruby
     end
 
     def scan_and_translate_constants(source)
-      source.gsub(Regexp.new(constant_map.keys.map { |x| Regexp.escape(x) }.join('|')), constant_map)
+      find_and_replace(source, constant_map.keys, constant_map)
+    end
+
+    def scan_and_translate_doublebyte(source)
+      find_and_replace(source, EmojiData.scan(source).select(&:doublebyte?).map(&:to_s), TRANSLATIONS)
+    end
+
+    def find_and_replace(source, search, replacements)
+      source.gsub(Regexp.new(search.map {|x| Regexp.escape(x)}.join('|')), replacements)
     end
 
     def constant_map
