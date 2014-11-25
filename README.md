@@ -8,6 +8,8 @@ A little language that compiles Emoji down to Ruby. It's just Ruby. Really.
 
 If I were a real language designer, I would have put a lot of thought into the syntax, semantics, and structure of emoruby. Instead I basically implemented an inefficient find-and-replace from a static dictionary. (🐄🎩!)
 
+### hello world
+
 Anyway, here is an example hello world program:
 
 ```emoruby
@@ -32,6 +34,8 @@ end
 Heart.new.wave
 ```
 
+### procs and comments
+
 You can also define things like Procs and comments:
 
 ```emoruby
@@ -49,6 +53,22 @@ which is equivalent to this Ruby:
   "smiley"
 end.call
 ```
+
+### enumerables and block params
+
+You can also define Array and Hash literals, and use the `{}` block syntax:
+
+```emoruby
+◀️9️⃣➰3️⃣▶️▪️📍 ⏪ 🏂🅰🏂 🅰 ➕ 1 ⏩
+```
+
+Which translates to this Ruby:
+
+```
+[9,3].map { |a| a + 1 }
+```
+
+### method visibility
 
 You can define private and protected methods:
 
@@ -136,6 +156,6 @@ Emoruby.emoji_to_ruby(source)
 
 ## Versioning
 
-The Emoruby team embraces and advocates the adoption of the the emerging iconographic versioning standard ("icover" for short).
+The Emoruby team embraces and advocates the adoption of the the emerging emotional versioning standard ("emover" for short).
 
-The initial release was 💩 (in honor of @tenderlove's 💩-lang). After that, ✊ was released. Next up is, of course, 🐷.
+The initial release was 💩 (in honor of @tenderlove's 💩-lang). After that, ✊ was released. Then came 🐷. The next planned release is 📈.
