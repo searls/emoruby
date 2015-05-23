@@ -1,9 +1,14 @@
 require "emoruby/version"
 require "emoruby/emoji_script"
+require "emoruby/converts_ruby_to_emoji"
 
 module Emoruby
   def self.emoji_to_ruby(source)
     EmojiScript.new(source).to_ruby
+  end
+
+  def self.ruby_to_emoji(source)
+    ConvertsRubyToEmoji.new(source).call
   end
 
   def self.eval(source)
