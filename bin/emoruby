@@ -2,6 +2,7 @@
 
 require 'emoruby'
 require 'pathname'
+Emoruby.register
 
 if path_arg = ARGV.first
   path = Pathname.new(path_arg).exist? ? Pathname.new(path_arg) : Pathname.pwd.join(path_arg)
