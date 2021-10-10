@@ -1,4 +1,4 @@
-require 'emoruby/converts_emoji_to_ruby'
+require "emoruby/converts_emoji_to_ruby"
 
 module Emoruby
   class EmojiScript
@@ -13,7 +13,7 @@ module Emoruby
     end
 
     def eval
-      eval(to_ruby)
+      eval(to_ruby) # standard:disable Security/Eval
     end
   end
 end

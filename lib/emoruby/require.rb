@@ -5,9 +5,9 @@ module Emoruby
     end
 
     def self.register(file_extension)
-      require 'polyglot'
+      require "polyglot"
       Polyglot.register(file_extension, Emoruby::Require)
-      return
+      nil
     end
   end
 end

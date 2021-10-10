@@ -1,6 +1,6 @@
-require 'spec_helper'
+require "spec_helper"
 
-require 'emoruby'
+require "emoruby"
 
 describe Emoruby do
   Given(:source) { load_fixture("6_blocks") }

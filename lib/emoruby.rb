@@ -13,13 +13,11 @@ module Emoruby
   end
 
   def self.capture_eval(source)
-    begin
-      $stdout = StringIO.new
-      eval(source)
-      $stdout.string.rstrip.inspect
-    ensure
-      $stdout = STDOUT
-    end
+    $stdout = StringIO.new
+    eval(source) # standard:disable Security/Eval
+    $stdout.string.rstrip.inspect
+  ensure
+    $stdout = STDOUT
   end
 
   def self.eval(source)
@@ -27,11 +25,11 @@ module Emoruby
   end
 
   def self.eval_to_emoji(source)
-    ruby_to_emoji(eval(source))
+    ruby_to_emoji(eval(source)) # standard:disable Security/Eval
   end
 
   def self.register(file_extension = "emoruby")
-    require 'emoruby/require'
+    require "emoruby/require"
     Require.register(file_extension)
   end
 end

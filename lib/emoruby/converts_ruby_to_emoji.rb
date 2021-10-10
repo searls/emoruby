@@ -1,15 +1,15 @@
-require 'emoji_data'
-require 'emoruby/util/string'
+require "emoji_data"
+require "emoruby/util/string"
 
-require 'yaml'
-require 'pathname'
+require "yaml"
+require "pathname"
 
 module Emoruby
   class ConvertsRubyToEmoji
-    TRANSLATIONS = YAML.load(File.read(Pathname.new(File.dirname(__FILE__)).join("..","..","config","translations.yml"))).invert
+    TRANSLATIONS = YAML.safe_load(File.read(Pathname.new(File.dirname(__FILE__)).join("..", "..", "config", "translations.yml"))).invert
 
     GARBAGE = [
-      [239,184,143] # evil problematic whitespace where is it from where am i what even
+      [239, 184, 143] # evil problematic whitespace where is it from where am i what even
     ]
 
     def initialize(source)
@@ -20,7 +20,7 @@ module Emoruby
       translate_lines(@source.lines).join("")
     end
 
-  private
+    private
 
     def translate_lines(lines)
       lines.map do |line|
@@ -45,14 +45,14 @@ module Emoruby
     def emoji_char_for(char)
       starts, ends = nil, nil
 
-      if char.start_with?(".") || char.start_with?(" ")
+      if char.start_with?(".", " ")
         starts = char[0]
         if char.end_with?(starts)
           ends = char[-1]
           char.chop!
         end
         char = char.reverse.chop.reverse
-      elsif char.end_with?(".") || char.end_with?(" ")
+      elsif char.end_with?(".", " ")
         ends = char[-1]
         char.chop!
       end
