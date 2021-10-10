@@ -1,11 +1,8 @@
-require 'rspec/given'
+require "rspec/given"
 
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+require "pry"
 
-require 'pry'
-
-require 'support/file_helpers'
+require "support/file_helpers"
 RSpec.configure do |c|
   c.include FileHelpers
 end

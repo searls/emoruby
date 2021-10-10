@@ -1,8 +1,6 @@
 # emoruby
 Use Emoji™
 
-[![Build Status](https://travis-ci.org/searls/emoruby.svg?branch=master)](https://travis-ci.org/searls/emoruby) [![Code Climate](https://codeclimate.com/github/searls/emoruby/badges/gpa.svg)](https://codeclimate.com/github/searls/emoruby) [![Test Coverage](https://codeclimate.com/github/searls/emoruby/badges/coverage.svg)](https://codeclimate.com/github/searls/emoruby)
-
 A little language that compiles Emoji down to Ruby. It's just Ruby. Really.
 
 ## The Language
